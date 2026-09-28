@@ -428,7 +428,7 @@ export default function Hero({
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0,
-                    boxShadow: '0 4px 12px rgba(16, 185, 129, 0.35)'
+                    boxShadow: '0 3px 8px rgba(16, 185, 129, 0.16)'
                   }}>
                     <ShieldCheck size={21} color="#FFFFFF" strokeWidth={2.2} />
                   </div>
@@ -450,7 +450,7 @@ export default function Hero({
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0,
-                    boxShadow: '0 4px 12px rgba(14, 165, 233, 0.35)'
+                    boxShadow: '0 3px 8px rgba(14, 165, 233, 0.16)'
                   }}>
                     <MapPin size={21} color="#FFFFFF" strokeWidth={2.2} />
                   </div>
@@ -472,7 +472,7 @@ export default function Hero({
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0,
-                    boxShadow: '0 4px 12px rgba(139, 92, 246, 0.35)'
+                    boxShadow: '0 3px 8px rgba(139, 92, 246, 0.16)'
                   }}>
                     <Store size={21} color="#FFFFFF" strokeWidth={2.2} />
                   </div>
@@ -494,7 +494,7 @@ export default function Hero({
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0,
-                    boxShadow: '0 4px 12px rgba(225, 29, 72, 0.35)'
+                    boxShadow: '0 3px 8px rgba(225, 29, 72, 0.16)'
                   }}>
                     <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
                       <circle cx="12" cy="12" r="9" />

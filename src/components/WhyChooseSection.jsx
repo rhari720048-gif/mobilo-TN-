@@ -6,42 +6,42 @@ export default function WhyChooseSection() {
     {
       icon: ShieldCheck,
       gradient: 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)',
-      shadow: '0 4px 12px rgba(37, 99, 235, 0.35)',
+      shadow: '0 3px 8px rgba(37, 99, 235, 0.16)',
       title: 'Verified Shops',
       desc: 'All shops are physically verified by district admins.'
     },
     {
       icon: AlertTriangle,
       gradient: 'linear-gradient(135deg, #E11D48 0%, #BE123C 100%)',
-      shadow: '0 4px 12px rgba(225, 29, 72, 0.35)',
+      shadow: '0 3px 8px rgba(225, 29, 72, 0.16)',
       title: 'Report Scammers',
       desc: 'Help and protect others from fraud.'
     },
     {
       icon: MapPin,
       gradient: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
-      shadow: '0 4px 12px rgba(16, 185, 129, 0.35)',
+      shadow: '0 3px 8px rgba(16, 185, 129, 0.16)',
       title: 'Location Based Search',
       desc: 'Find shops near you with ease.'
     },
     {
       icon: Shield,
       gradient: 'linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%)',
-      shadow: '0 4px 12px rgba(139, 92, 246, 0.35)',
+      shadow: '0 3px 8px rgba(139, 92, 246, 0.16)',
       title: 'Trusted Platform',
       desc: 'Real reviews, real people, real shops.'
     },
     {
       icon: MapPin,
       gradient: 'linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%)',
-      shadow: '0 4px 12px rgba(14, 165, 233, 0.35)',
+      shadow: '0 3px 8px rgba(14, 165, 233, 0.16)',
       title: '38 Districts Covered',
       desc: 'From Chennai to Kanyakumari.'
     },
     {
       icon: Headphones,
       gradient: 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)',
-      shadow: '0 4px 12px rgba(245, 158, 11, 0.35)',
+      shadow: '0 3px 8px rgba(245, 158, 11, 0.16)',
       title: '24/7 Support',
       desc: "We're here to help you always."
     }

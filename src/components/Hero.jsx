@@ -512,14 +512,14 @@ export default function Hero({
                 src="/hero_illustration.png" 
                 alt="Tamil Nadu Verified Mobile Shops Map & Storefront"
                 style={{ 
-                  width: '107%', 
-                  maxWidth: '945px', 
+                  width: '106%', 
+                  maxWidth: '940px', 
                   height: 'auto', 
                   display: 'block',
                   marginLeft: 'auto',
                   marginRight: 0,
                   marginTop: '-5.75rem',
-                  transform: 'scale(1.11) translate(-10px, -21px)',
+                  transform: 'scale(1.09) translate(-10px, -21px)',
                   transformOrigin: 'right bottom',
                   marginBottom: '-7px',
                   objectFit: 'contain',

@@ -56,7 +56,7 @@ export default function Hero({
           radial-gradient(circle at 75% 35%, #C8E5FD 0%, rgba(239, 247, 254, 0) 65%),
           linear-gradient(135deg, #F4F9FE 0%, #E3F1FE 50%, #D2E7FD 100%)
         `,
-        padding: '2.5rem 0 0 0',
+        padding: '3rem 0 0 0',
         minHeight: 'calc(100vh - 70px)',
         display: 'flex',
         flexDirection: 'column',
@@ -71,28 +71,32 @@ export default function Hero({
           width: '100%',
           margin: 0,
           paddingLeft: 'max(1.5rem, calc((100vw - 1220px) / 2))',
-          paddingRight: 0
+          paddingRight: 0,
+          flex: '1 1 auto',
+          display: 'flex',
+          alignItems: 'center'
         }}>
           
           {/* Main 2-Column Hero Grid */}
           <div style={{
             display: 'grid',
             gridTemplateColumns: '1fr',
-            gap: '1.5rem',
-            alignItems: 'flex-end'
+            gap: '2rem',
+            alignItems: 'flex-end',
+            width: '100%'
           }} className="hero-grid-layout">
             
             {/* Left Column - Content & Location Box */}
-            <div style={{ paddingRight: '1.5rem', paddingBottom: '1.25rem', zIndex: 30, position: 'relative' }} className="hero-left-content">
+            <div style={{ paddingRight: '1.5rem', paddingBottom: '1.5rem', zIndex: 30, position: 'relative' }} className="hero-left-content">
               
               {/* Main Headline */}
               <h1 style={{
-                fontSize: 'clamp(2.25rem, 4.2vw, 3.1rem)',
+                fontSize: 'clamp(2.35rem, 4.4vw, 3.25rem)',
                 color: '#0F172A',
                 lineHeight: 1.12,
                 fontWeight: 900,
                 letterSpacing: '-0.035em',
-                marginBottom: '0.85rem',
+                marginBottom: '1rem',
                 fontFamily: 'Inter, sans-serif'
               }}>
                 Find Verified Mobile Shops in TN & <span style={{ color: '#2563EB' }}>Avoid Scams</span>
@@ -100,11 +104,11 @@ export default function Hero({
 
               {/* Subtitle Description */}
               <p style={{
-                fontSize: '0.95rem',
+                fontSize: '1.025rem',
                 color: '#334155',
-                lineHeight: 1.5,
-                marginBottom: '1.25rem',
-                maxWidth: '540px',
+                lineHeight: 1.55,
+                marginBottom: '1.5rem',
+                maxWidth: '560px',
                 fontWeight: 500
               }}>
                 Get genuine mobile shops verified by District Admins. <br className="hide-mobile" />
@@ -115,30 +119,30 @@ export default function Hero({
               <div 
                 className="location-card-glass"
                 style={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.92)',
+                  backgroundColor: 'rgba(255, 255, 255, 0.94)',
                   backdropFilter: 'blur(12px)',
                   WebkitBackdropFilter: 'blur(12px)',
-                  borderRadius: '16px',
-                  padding: '0.85rem 1.1rem',
-                  boxShadow: '0 12px 35px -8px rgba(37, 99, 235, 0.14), 0 4px 12px -2px rgba(15, 23, 42, 0.04)',
+                  borderRadius: '18px',
+                  padding: '1.05rem 1.25rem',
+                  boxShadow: '0 14px 38px -8px rgba(37, 99, 235, 0.16), 0 4px 14px -2px rgba(15, 23, 42, 0.04)',
                   border: '1px solid #CBD5E1',
-                  marginBottom: '1.5rem',
-                  maxWidth: '490px',
+                  marginBottom: '2.25rem',
+                  maxWidth: '510px',
                   position: 'relative',
                   zIndex: 40,
                   transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
                 }}
               >
 
-                {/* Curved Blue Doodle Arrow pointing directly towards Continue button - Adjusted */}
+                {/* Curved Blue Doodle Arrow pointing directly towards Continue button */}
                 <img 
                   src="/blue_curved_arrow.png" 
                   alt="Curved Blue Arrow" 
                   style={{
                     position: 'absolute',
-                    top: '-95px',
-                    right: '-160px',
-                    width: '220px',
+                    top: '-100px',
+                    right: '-165px',
+                    width: '235px',
                     height: 'auto',
                     pointerEvents: 'none',
                     zIndex: 20
@@ -146,30 +150,30 @@ export default function Hero({
                   className="hide-mobile"
                 />
 
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '0.45rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.55rem' }}>
                   
-                  {/* Location Map Pin Graphic Icon - Shifted Higher Up */}
+                  {/* Location Map Pin Graphic Icon */}
                   <div style={{ flexShrink: 0 }}>
                     <img 
                       src="/location_pin_graphic.png" 
                       alt="Location Pin Graphic"
-                      style={{ width: '56px', height: '56px', objectFit: 'contain', display: 'block', transform: 'translateY(-6px)' }}
+                      style={{ width: '64px', height: '64px', objectFit: 'contain', display: 'block', transform: 'translateY(-6px)' }}
                     />
                   </div>
 
                   <div>
-                    <h3 style={{ fontSize: '0.92rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.1rem', lineHeight: 1.2 }}>
+                    <h3 style={{ fontSize: '0.985rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.12rem', lineHeight: 1.2 }}>
                       Choose Your Location First
                     </h3>
-                    <p style={{ fontSize: '0.78rem', color: '#64748B', fontWeight: 500, lineHeight: 1.25 }}>
+                    <p style={{ fontSize: '0.8rem', color: '#64748B', fontWeight: 500, lineHeight: 1.25 }}>
                       Select your district to find verified mobile shops near you.
                     </p>
                   </div>
                 </div>
 
                 {/* Popular Quick Select Chips */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', marginBottom: '0.55rem', flexWrap: 'wrap' }}>
-                  <span style={{ fontSize: '0.7rem', color: '#64748B', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', marginBottom: '0.65rem', flexWrap: 'wrap' }}>
+                  <span style={{ fontSize: '0.72rem', color: '#64748B', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                     Popular:
                   </span>
                   {['Chennai', 'Coimbatore', 'Madurai', 'Trichy'].map((districtName) => {
@@ -184,9 +188,9 @@ export default function Hero({
                           setSelectedTown("All Areas");
                         }}
                         style={{
-                          fontSize: '0.72rem',
+                          fontSize: '0.73rem',
                           fontWeight: 600,
-                          padding: '0.15rem 0.55rem',
+                          padding: '0.18rem 0.6rem',
                           borderRadius: '99px',
                           border: isChipSelected ? '1px solid #2563EB' : '1px solid #E2E8F0',
                           backgroundColor: isChipSelected ? '#EFF6FF' : '#F8FAFC',
@@ -199,7 +203,7 @@ export default function Hero({
                         }}
                         className="quick-chip-hover"
                       >
-                        <MapPin size={11} color="#2563EB" style={{ flexShrink: 0 }} />
+                        <MapPin size={12} color="#2563EB" style={{ flexShrink: 0 }} />
                         <span>{districtName}</span>
                       </button>
                     );
@@ -209,13 +213,13 @@ export default function Hero({
                 {/* District Select Input Row with Action Button */}
                 <div style={{
                   display: 'flex',
-                  gap: '0.5rem',
+                  gap: '0.55rem',
                   alignItems: 'center',
                   flexWrap: 'wrap'
                 }}>
                   <div 
                     ref={dropdownRef}
-                    style={{ flex: 1, minWidth: '160px', position: 'relative' }}
+                    style={{ flex: 1, minWidth: '170px', position: 'relative' }}
                   >
                     {/* Custom Dropdown Trigger */}
                     <button
@@ -229,10 +233,10 @@ export default function Hero({
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'space-between',
-                        padding: '0.48rem 0.65rem 0.48rem 2.1rem',
+                        padding: '0.52rem 0.75rem 0.52rem 2.25rem',
                         borderRadius: '9px',
                         border: isOpen ? '1.5px solid #2563EB' : '1px solid #CBD5E1',
-                        fontSize: '0.82rem',
+                        fontSize: '0.84rem',
                         fontWeight: 600,
                         color: selectedDistrict === 'All Districts' ? '#64748B' : '#0F172A',
                         backgroundColor: '#FFFFFF',
@@ -243,12 +247,12 @@ export default function Hero({
                         position: 'relative'
                       }}
                     >
-                      <MapPin size={15} color="#2563EB" style={{ position: 'absolute', left: '0.65rem', pointerEvents: 'none' }} />
+                      <MapPin size={16} color="#2563EB" style={{ position: 'absolute', left: '0.75rem', pointerEvents: 'none' }} />
                       <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', paddingRight: '0.5rem' }}>
                         {selectedDistrict === 'All Districts' ? 'Select District' : selectedDistrict}
                       </span>
                       <ChevronDown 
-                        size={15} 
+                        size={16} 
                         color="#64748B" 
                         style={{ 
                           flexShrink: 0, 
@@ -266,7 +270,7 @@ export default function Hero({
                           top: 'calc(100% + 6px)',
                           left: 0,
                           width: '100%',
-                          minWidth: '230px',
+                          minWidth: '240px',
                           backgroundColor: '#FFFFFF',
                           borderRadius: '14px',
                           border: '1px solid #CBD5E1',
@@ -294,7 +298,7 @@ export default function Hero({
                             onChange={(e) => setSearchQuery(e.target.value)}
                             style={{
                               width: '100%',
-                              padding: '0.4rem 1.8rem 0.4rem 2rem',
+                              padding: '0.45rem 1.8rem 0.45rem 2rem',
                               borderRadius: '8px',
                               border: '1px solid #E2E8F0',
                               fontSize: '0.8rem',
@@ -328,7 +332,7 @@ export default function Hero({
                         {/* Scrollable District List */}
                         <div 
                           style={{
-                            maxHeight: '200px',
+                            maxHeight: '210px',
                             overflowY: 'auto',
                             display: 'flex',
                             flexDirection: 'column',
@@ -352,9 +356,9 @@ export default function Hero({
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'space-between',
-                                    padding: '0.45rem 0.65rem',
+                                    padding: '0.48rem 0.75rem',
                                     borderRadius: '7px',
-                                    fontSize: '0.8rem',
+                                    fontSize: '0.83rem',
                                     fontWeight: isSelected ? 700 : 500,
                                     color: isSelected ? '#2563EB' : '#334155',
                                     backgroundColor: isSelected ? '#EFF6FF' : 'transparent',
@@ -384,12 +388,12 @@ export default function Hero({
                       backgroundColor: '#2563EB',
                       color: '#FFFFFF',
                       fontWeight: 700,
-                      fontSize: '0.82rem',
-                      padding: '0.48rem 1.05rem',
+                      fontSize: '0.84rem',
+                      padding: '0.52rem 1.15rem',
                       borderRadius: '9px',
                       display: 'inline-flex',
                       alignItems: 'center',
-                      gap: '0.35rem',
+                      gap: '0.4rem',
                       boxShadow: '0 4px 14px rgba(37, 99, 235, 0.3)',
                       transition: 'all 0.2s ease',
                       flexShrink: 0
@@ -405,7 +409,7 @@ export default function Hero({
               <div style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: '0.85rem',
+                gap: '1rem',
                 width: 'max-content',
                 maxWidth: 'none',
                 flexWrap: 'nowrap',
@@ -414,86 +418,86 @@ export default function Hero({
               }}>
                 
                 {/* Feature 1 - Verified Shops Only */}
-                <div className="feature-badge-hover" style={{ display: 'flex', alignItems: 'center', gap: '0.55rem' }}>
+                <div className="feature-badge-hover" style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
                   <div className="badge-circle-icon" style={{ 
                     backgroundColor: '#6EE7B7', 
-                    width: '38px',
-                    height: '38px',
+                    width: '42px',
+                    height: '42px',
                     borderRadius: '50%', 
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0
                   }}>
-                    <ShieldCheck size={19} color="#FFFFFF" fill="#047857" />
+                    <ShieldCheck size={21} color="#FFFFFF" fill="#047857" />
                   </div>
-                  <span style={{ fontSize: '0.78rem', fontWeight: 700, color: '#0F172A', lineHeight: 1.25, fontFamily: 'Inter, sans-serif' }}>
+                  <span style={{ fontSize: '0.825rem', fontWeight: 700, color: '#0F172A', lineHeight: 1.25, fontFamily: 'Inter, sans-serif' }}>
                     Verified <br />Shops Only
                   </span>
                 </div>
 
-                <div style={{ height: '28px', width: '1px', backgroundColor: '#CBD5E1', margin: '0 0.15rem' }} className="hide-mobile" />
+                <div style={{ height: '32px', width: '1px', backgroundColor: '#CBD5E1', margin: '0 0.25rem' }} className="hide-mobile" />
 
                 {/* Feature 2 - 38 Districts Covered */}
-                <div className="feature-badge-hover" style={{ display: 'flex', alignItems: 'center', gap: '0.55rem' }}>
+                <div className="feature-badge-hover" style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
                   <div className="badge-circle-icon" style={{ 
                     backgroundColor: '#7DD3FC', 
-                    width: '38px',
-                    height: '38px',
+                    width: '42px',
+                    height: '42px',
                     borderRadius: '50%', 
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0
                   }}>
-                    <MapPin size={19} color="#FFFFFF" fill="#0284C7" />
+                    <MapPin size={21} color="#FFFFFF" fill="#0284C7" />
                   </div>
-                  <span style={{ fontSize: '0.78rem', fontWeight: 700, color: '#0F172A', lineHeight: 1.25, fontFamily: 'Inter, sans-serif' }}>
+                  <span style={{ fontSize: '0.825rem', fontWeight: 700, color: '#0F172A', lineHeight: 1.25, fontFamily: 'Inter, sans-serif' }}>
                     38 Districts <br />Covered
                   </span>
                 </div>
 
-                <div style={{ height: '28px', width: '1px', backgroundColor: '#CBD5E1', margin: '0 0.15rem' }} className="hide-mobile" />
+                <div style={{ height: '32px', width: '1px', backgroundColor: '#CBD5E1', margin: '0 0.25rem' }} className="hide-mobile" />
 
                 {/* Feature 3 - Physical Store Inspection */}
-                <div className="feature-badge-hover" style={{ display: 'flex', alignItems: 'center', gap: '0.55rem' }}>
+                <div className="feature-badge-hover" style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
                   <div className="badge-circle-icon" style={{ 
                     backgroundColor: '#D8B4FE', 
-                    width: '38px',
-                    height: '38px',
+                    width: '42px',
+                    height: '42px',
                     borderRadius: '50%', 
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0
                   }}>
-                    <Store size={19} color="#7E22CE" strokeWidth={2.4} />
+                    <Store size={21} color="#7E22CE" strokeWidth={2.4} />
                   </div>
-                  <span style={{ fontSize: '0.78rem', fontWeight: 700, color: '#0F172A', lineHeight: 1.25, fontFamily: 'Inter, sans-serif' }}>
+                  <span style={{ fontSize: '0.825rem', fontWeight: 700, color: '#0F172A', lineHeight: 1.25, fontFamily: 'Inter, sans-serif' }}>
                     Physical Store <br />Inspection
                   </span>
                 </div>
 
-                <div style={{ height: '28px', width: '1px', backgroundColor: '#CBD5E1', margin: '0 0.15rem' }} className="hide-mobile" />
+                <div style={{ height: '32px', width: '1px', backgroundColor: '#CBD5E1', margin: '0 0.25rem' }} className="hide-mobile" />
 
                 {/* Feature 4 - Stop Scammers */}
-                <div className="feature-badge-hover" style={{ display: 'flex', alignItems: 'center', gap: '0.55rem' }}>
+                <div className="feature-badge-hover" style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
                   <div className="badge-circle-icon" style={{ 
                     backgroundColor: '#FCA5A5', 
-                    width: '38px',
-                    height: '38px',
+                    width: '42px',
+                    height: '42px',
                     borderRadius: '50%', 
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0
                   }}>
-                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#B91C1C" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#B91C1C" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <circle cx="12" cy="12" r="9" />
                       <line x1="5.6" y1="5.6" x2="18.4" y2="18.4" />
                     </svg>
                   </div>
-                  <span style={{ fontSize: '0.78rem', fontWeight: 700, color: '#0F172A', lineHeight: 1.25, fontFamily: 'Inter, sans-serif' }}>
+                  <span style={{ fontSize: '0.825rem', fontWeight: 700, color: '#0F172A', lineHeight: 1.25, fontFamily: 'Inter, sans-serif' }}>
                     Stop <br />Scammers
                   </span>
                 </div>
@@ -502,7 +506,7 @@ export default function Hero({
 
             </div>
 
-            {/* Right Column - Illustration Image */}
+            {/* Right Column - Larger Illustration Image Flush at Bottom */}
             <div style={{ 
               position: 'relative', 
               display: 'flex', 
@@ -510,22 +514,22 @@ export default function Hero({
               justifyContent: 'flex-end',
               width: '100%',
               overflow: 'visible',
-              marginBottom: '-3px'
+              marginBottom: '-2px'
             }} className="hero-img-col">
               <img 
                 src="/hero_illustration.png" 
                 alt="Tamil Nadu Verified Mobile Shops Map & Storefront"
                 style={{ 
-                  width: '106%', 
-                  maxWidth: '940px', 
+                  width: '114%', 
+                  maxWidth: '1040px', 
                   height: 'auto', 
                   display: 'block',
                   marginLeft: 'auto',
                   marginRight: 0,
-                  marginTop: '-5.25rem',
-                  transform: 'scale(1.09) translate(-10px, -10px)',
+                  marginTop: '-6.5rem',
+                  transform: 'scale(1.15) translate(-10px, 4px)',
                   transformOrigin: 'right bottom',
-                  marginBottom: '-12px',
+                  marginBottom: '-2px',
                   objectFit: 'contain',
                   objectPosition: 'right bottom'
                 }}
@@ -539,13 +543,13 @@ export default function Hero({
         <style>{`
           @media (min-width: 992px) {
             .hero-grid-layout {
-              grid-template-columns: 1fr 1.1fr !important;
+              grid-template-columns: 1fr 1.15fr !important;
             }
           }
           @media (max-width: 991px) {
             .hero-left-content {
               padding-right: 1.25rem !important;
-              padding-bottom: 1rem !important;
+              padding-bottom: 1.25rem !important;
             }
             .hero-img-col {
               justify-content: center !important;
@@ -557,7 +561,7 @@ export default function Hero({
           }
           .location-card-glass:hover {
             transform: translateY(-3px) !important;
-            box-shadow: 0 16px 36px -8px rgba(37, 99, 235, 0.18) !important;
+            box-shadow: 0 18px 42px -10px rgba(37, 99, 235, 0.2) !important;
             border-color: #93C5FD !important;
           }
           .quick-chip-hover:hover {
@@ -568,17 +572,17 @@ export default function Hero({
           }
           .feature-badge-hover {
             transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
-            padding: 0.25rem 0.4rem;
-            border-radius: 10px;
+            padding: 0.3rem 0.5rem;
+            border-radius: 12px;
             cursor: default;
           }
           .feature-badge-hover:hover {
-            transform: translateY(-2px) !important;
+            transform: translateY(-3px) !important;
             background-color: rgba(255, 255, 255, 0.75) !important;
-            box-shadow: 0 6px 14px -4px rgba(37, 99, 235, 0.1) !important;
+            box-shadow: 0 8px 18px -4px rgba(37, 99, 235, 0.12) !important;
           }
           .feature-badge-hover:hover .badge-circle-icon {
-            transform: scale(1.06) !important;
+            transform: scale(1.08) !important;
           }
           .badge-circle-icon {
             transition: transform 0.25s ease !important;
@@ -588,7 +592,7 @@ export default function Hero({
             color: #1D4ED8 !important;
           }
           .custom-dropdown-scrollbar::-webkit-scrollbar {
-            width: 5px;
+            width: 6px;
           }
           .custom-dropdown-scrollbar::-webkit-scrollbar-track {
             background: #F8FAFC;
@@ -612,20 +616,20 @@ export default function Hero({
       <div style={{
         backgroundColor: '#FFFFFF',
         borderBottom: '1px solid #F1F5F9',
-        padding: '0.6rem 1.25rem',
+        padding: '0.75rem 1.5rem',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         gap: '1.25rem',
-        fontSize: '0.8rem',
+        fontSize: '0.835rem',
         color: '#64748B',
         fontWeight: 600,
         flexWrap: 'wrap'
       }}>
-        <div style={{ width: '60px', height: '1px', background: 'linear-gradient(90deg, transparent 0%, #CBD5E1 100%)' }} className="hide-mobile" />
+        <div style={{ width: '70px', height: '1px', background: 'linear-gradient(90deg, transparent 0%, #CBD5E1 100%)' }} className="hide-mobile" />
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-          <ShieldCheck size={15} color="#2563EB" />
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
+          <ShieldCheck size={16} color="#2563EB" />
           <span style={{ color: '#334155', fontWeight: 600 }}>Verified Shops</span>
         </div>
 
@@ -641,7 +645,7 @@ export default function Hero({
           A Trusted Tamil Nadu
         </div>
 
-        <div style={{ width: '60px', height: '1px', background: 'linear-gradient(90deg, #CBD5E1 0%, transparent 100%)' }} className="hide-mobile" />
+        <div style={{ width: '70px', height: '1px', background: 'linear-gradient(90deg, #CBD5E1 0%, transparent 100%)' }} className="hide-mobile" />
       </div>
     </>
   );

@@ -5,43 +5,31 @@ export default function WhyChooseSection() {
   const features = [
     {
       icon: ShieldCheck,
-      iconBg: '#E6F0FF',
-      iconColor: '#2563EB',
       title: 'Verified Shops',
       desc: 'All shops are physically verified by district admins.'
     },
     {
       icon: AlertTriangle,
-      iconBg: '#FFE4E6',
-      iconColor: '#F43F5E',
       title: 'Report Scammers',
       desc: 'Help and protect others from fraud.'
     },
     {
       icon: MapPin,
-      iconBg: '#D1FAE5',
-      iconColor: '#10B981',
       title: 'Location Based Search',
       desc: 'Find shops near you with ease.'
     },
     {
       icon: Shield,
-      iconBg: '#F3E8FF',
-      iconColor: '#A855F7',
       title: 'Trusted Platform',
       desc: 'Real reviews, real people, real shops.'
     },
     {
       icon: MapPin,
-      iconBg: '#E0F2FE',
-      iconColor: '#0284C7',
       title: '38 Districts Covered',
       desc: 'From Chennai to Kanyakumari.'
     },
     {
       icon: Headphones,
-      iconBg: '#FEF3C7',
-      iconColor: '#D97706',
       title: '24/7 Support',
       desc: "We're here to help you always."
     }
@@ -100,10 +88,10 @@ export default function WhyChooseSection() {
                 }}
                 className="why-choose-single-card"
               >
-                {/* Squircle Icon Badge */}
+                {/* MOBILO Official Blue Gradient Icon Badge */}
                 <div style={{
-                  backgroundColor: feat.iconBg,
-                  color: feat.iconColor,
+                  background: 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)',
+                  color: '#FFFFFF',
                   width: '42px',
                   height: '42px',
                   borderRadius: '12px',
@@ -111,9 +99,10 @@ export default function WhyChooseSection() {
                   alignItems: 'center',
                   justifyContent: 'center',
                   marginBottom: '0.85rem',
-                  flexShrink: 0
+                  flexShrink: 0,
+                  boxShadow: '0 3px 8px rgba(37, 99, 235, 0.25)'
                 }}>
-                  <Icon size={21} strokeWidth={2.2} />
+                  <Icon size={21} color="#FFFFFF" strokeWidth={2.2} />
                 </div>
 
                 {/* Title & Desc */}

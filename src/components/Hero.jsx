@@ -406,16 +406,19 @@ export default function Hero({
               </div>
 
               {/* Bottom 4 Feature Badges */}
-              <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.85rem',
-                width: 'max-content',
-                maxWidth: 'none',
-                flexWrap: 'nowrap',
-                position: 'relative',
-                zIndex: 10
-              }}>
+              <div 
+                className="hero-bottom-badges"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.85rem',
+                  width: 'max-content',
+                  maxWidth: 'none',
+                  flexWrap: 'nowrap',
+                  position: 'relative',
+                  zIndex: 10
+                }}
+              >
                 
                 {/* Feature 1 - Verified Shops Only */}
                 <div className="feature-badge-hover" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -552,15 +555,41 @@ export default function Hero({
           }
           @media (max-width: 991px) {
             .hero-left-content {
-              padding-right: 1.25rem !important;
-              padding-bottom: 1.25rem !important;
+              padding-right: 0 !important;
+              padding-bottom: 1rem !important;
             }
             .hero-img-col {
               justify-content: center !important;
-              padding-right: 1.25rem !important;
+              padding-right: 0 !important;
+              margin-top: 1rem !important;
             }
             .hero-img-col img {
-              margin-right: auto !important;
+              width: 100% !important;
+              max-width: 520px !important;
+              margin: 0 auto !important;
+              transform: none !important;
+              marginTop: 0 !important;
+            }
+          }
+          @media (max-width: 768px) {
+            .hero-bottom-badges {
+              width: 100% !important;
+              max-width: 100% !important;
+              display: grid !important;
+              grid-template-columns: repeat(2, 1fr) !important;
+              gap: 0.65rem !important;
+            }
+            .feature-badge-hover {
+              padding: 0.35rem !important;
+            }
+            .location-card-glass {
+              max-width: 100% !important;
+              padding: 0.9rem !important;
+            }
+          }
+          @media (max-width: 480px) {
+            .hero-bottom-badges {
+              grid-template-columns: 1fr !important;
             }
           }
           .location-card-glass:hover {

@@ -369,6 +369,15 @@ export default function AboutSection() {
           border-color: #BFDBFE !important;
           background-color: #FFFFFF !important;
         }
+        @media (max-width: 768px) {
+          #about-section {
+            padding: 2.5rem 0 !important;
+          }
+          .about-banner-metrics {
+            padding: 1rem 0.5rem !important;
+            gap: 0.5rem !important;
+          }
+        }
       `}</style>
     </section>
   );

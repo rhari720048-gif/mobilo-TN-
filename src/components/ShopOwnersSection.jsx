@@ -7,30 +7,26 @@ export default function ShopOwnersSection() {
       num: 1, 
       title: 'Register Your Shop',
       icon: UserPlus,
-      gradient: 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)',
-      shadow: '0 3px 8px rgba(37, 99, 235, 0.16)'
+      iconColor: '#2563EB'
     },
     { 
       num: 2, 
       title: 'Physical Verification', 
       subtitle: 'by District Admins',
       icon: FileCheck,
-      gradient: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
-      shadow: '0 3px 8px rgba(16, 185, 129, 0.16)'
+      iconColor: '#10B981'
     },
     { 
       num: 3, 
       title: 'Get Approved', 
       icon: Award,
-      gradient: 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)',
-      shadow: '0 3px 8px rgba(245, 158, 11, 0.16)'
+      iconColor: '#D97706'
     },
     { 
       num: 4, 
       title: 'Manage Your Shop', 
       icon: LayoutDashboard,
-      gradient: 'linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%)',
-      shadow: '0 3px 8px rgba(139, 92, 246, 0.16)'
+      iconColor: '#8B5CF6'
     }
   ];
 
@@ -121,31 +117,29 @@ export default function ShopOwnersSection() {
                 >
                   {/* Step Number Pill */}
                   <div style={{
-                    background: s.gradient,
-                    color: '#FFFFFF',
-                    width: '28px',
-                    height: '28px',
+                    backgroundColor: '#F1F5F9',
+                    color: s.iconColor,
+                    width: '26px',
+                    height: '26px',
                     borderRadius: '50%',
-                    fontSize: '0.82rem',
+                    fontSize: '0.8rem',
                     fontWeight: 800,
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    marginBottom: '0.55rem',
-                    boxShadow: s.shadow
+                    marginBottom: '0.65rem'
                   }}>
                     {s.num}
                   </div>
 
+                  {/* Clean Icon without background color */}
                   <div style={{
-                    background: s.gradient,
-                    padding: '0.45rem',
-                    borderRadius: '10px',
-                    color: '#FFFFFF',
-                    marginBottom: '0.45rem',
-                    boxShadow: s.shadow
+                    marginBottom: '0.55rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
                   }}>
-                    <IconComponent size={19} color="#FFFFFF" strokeWidth={2.2} />
+                    <IconComponent size={26} color={s.iconColor} strokeWidth={2.2} />
                   </div>
 
                   <h3 style={{ fontSize: '0.9rem', fontWeight: 800, color: '#0F172A', margin: 0, lineHeight: 1.3 }}>

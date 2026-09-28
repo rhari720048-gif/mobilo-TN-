@@ -30,7 +30,7 @@ export default function ContactSection() {
     <section 
       id="contact" 
       style={{ 
-        padding: '4rem 0', 
+        padding: '3.5rem 0', 
         backgroundColor: '#F8FAFC',
         borderTop: '1px solid #E2E8F0'
       }}
@@ -70,7 +70,7 @@ export default function ContactSection() {
                 display: 'flex',
                 alignItems: 'center',
                 gap: '1rem',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.03)'
+                boxShadow: '0 4px 14px rgba(15, 23, 42, 0.04)'
               }}>
                 <div style={{
                   background: 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)',
@@ -101,7 +101,7 @@ export default function ContactSection() {
                 display: 'flex',
                 alignItems: 'center',
                 gap: '1rem',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.03)'
+                boxShadow: '0 4px 14px rgba(15, 23, 42, 0.04)'
               }}>
                 <div style={{
                   background: 'linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%)',
@@ -131,7 +131,7 @@ export default function ContactSection() {
                 display: 'flex',
                 alignItems: 'center',
                 gap: '1rem',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.03)'
+                boxShadow: '0 4px 14px rgba(15, 23, 42, 0.04)'
               }}>
                 <div style={{
                   background: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
@@ -180,7 +180,7 @@ export default function ContactSection() {
             borderRadius: '20px',
             padding: '2.25rem 2rem',
             border: '1px solid #E2E8F0',
-            boxShadow: '0 10px 30px -5px rgba(15, 23, 42, 0.06)'
+            boxShadow: '0 4px 14px rgba(15, 23, 42, 0.04)'
           }}>
             
             <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.35rem' }}>

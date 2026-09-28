@@ -41,7 +41,7 @@ export default function HowItWorksSection() {
     <section 
       id="how-it-works"
       style={{
-        padding: '2rem 0 0.25rem 0',
+        padding: '3.5rem 0 1.25rem 0',
         backgroundColor: '#FFFFFF',
         borderBottom: '1px solid #E2E8F0',
         position: 'relative',
@@ -52,7 +52,7 @@ export default function HowItWorksSection() {
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         
         {/* Section Header - Compact */}
-        <div style={{ marginBottom: '1.25rem' }}>
+        <div style={{ marginBottom: '1.5rem' }}>
           <h2 style={{
             fontSize: '2.25rem',
             fontWeight: 850,
@@ -94,10 +94,10 @@ export default function HowItWorksSection() {
                     style={{
                       backgroundColor: '#F8FAFC',
                       borderRadius: '14px',
-                      padding: '0.9rem 0.85rem',
+                      padding: '1.1rem 0.95rem',
                       border: '1px solid #E2E8F0',
-                      boxShadow: '0 3px 10px rgba(15, 23, 42, 0.03)',
-                      transition: 'all 0.25s ease',
+                      boxShadow: '0 4px 14px rgba(15, 23, 42, 0.04)',
+                      transition: 'all 0.25s cubic-bezier(0.16, 1, 0.3, 1)',
                       display: 'flex',
                       flexDirection: 'column',
                       alignItems: 'flex-start',
@@ -170,9 +170,9 @@ export default function HowItWorksSection() {
 
       <style>{`
         .how-it-works-single-card:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 8px 20px -4px rgba(37, 99, 235, 0.12) !important;
-          border-color: #BFDBFE !important;
+          transform: translateY(-4px) !important;
+          box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.08) !important;
+          border-color: #93C5FD !important;
           background-color: #FFFFFF !important;
         }
         .how-it-works-arrow-connector {

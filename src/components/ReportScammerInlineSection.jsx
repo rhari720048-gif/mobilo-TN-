@@ -48,7 +48,7 @@ export default function ReportScammerInlineSection({ districts, onSubmitReport }
     <section 
       id="report-scammer-section"
       style={{
-        padding: '2.5rem 0',
+        padding: '3.5rem 0',
         backgroundColor: '#FFFFFF',
         borderBottom: '1px solid #E2E8F0'
       }}
@@ -61,7 +61,7 @@ export default function ReportScammerInlineSection({ districts, onSubmitReport }
           borderRadius: '16px',
           padding: '1.75rem 1.5rem',
           border: '1px solid #FCA5A5',
-          boxShadow: '0 6px 20px -4px rgba(239, 68, 68, 0.08)'
+          boxShadow: '0 4px 14px rgba(15, 23, 42, 0.04)'
         }}>
           
           {/* Header */}

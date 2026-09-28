@@ -33,7 +33,7 @@ export default function ShopOwnersSection() {
   return (
     <section 
       style={{
-        padding: '3rem 0',
+        padding: '3.5rem 0',
         backgroundColor: '#FFFFFF',
         borderBottom: '1px solid #E2E8F0'
       }}
@@ -43,9 +43,9 @@ export default function ShopOwnersSection() {
         <div style={{
           backgroundColor: '#F8FAFC',
           borderRadius: '24px',
-          padding: '2.25rem 2rem',
+          padding: '2.5rem 2.25rem',
           border: '1px solid #E2E8F0',
-          boxShadow: '0 4px 20px rgba(15, 23, 42, 0.03)'
+          boxShadow: '0 4px 20px rgba(15, 23, 42, 0.04)'
         }}>
           
           {/* Header */}
@@ -102,18 +102,20 @@ export default function ShopOwnersSection() {
                   key={s.num}
                   style={{
                     backgroundColor: '#FFFFFF',
-                    padding: '1.25rem 1rem',
+                    padding: '1.35rem 1.15rem',
                     borderRadius: '16px',
                     border: '1px solid #E2E8F0',
-                    boxShadow: '0 4px 12px rgba(15, 23, 42, 0.03)',
+                    boxShadow: '0 4px 14px rgba(15, 23, 42, 0.04)',
                     textAlign: 'center',
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: 'center',
                     position: 'relative',
-                    minHeight: '135px'
+                    minHeight: '140px',
+                    transition: 'all 0.25s cubic-bezier(0.16, 1, 0.3, 1)'
                   }}
+                  className="shop-owner-single-card"
                 >
                   {/* Step Number Pill */}
                   <div style={{
@@ -185,6 +187,11 @@ export default function ShopOwnersSection() {
       </div>
 
       <style>{`
+        .shop-owner-single-card:hover {
+          transform: translateY(-4px) !important;
+          box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.08) !important;
+          border-color: #93C5FD !important;
+        }
         @media (max-width: 900px) {
           .shop-owner-steps-grid {
             grid-template-columns: repeat(2, 1fr) !important;

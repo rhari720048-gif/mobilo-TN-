@@ -7,6 +7,7 @@ export default function WhyChooseSection() {
       icon: ShieldCheck,
       gradient: 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)',
       shadow: '0 3px 8px rgba(37, 99, 235, 0.16)',
+      tag: '100% Verified',
       title: 'Verified Shops',
       desc: 'All shops are physically verified by district admins.'
     },
@@ -14,6 +15,7 @@ export default function WhyChooseSection() {
       icon: AlertTriangle,
       gradient: 'linear-gradient(135deg, #E11D48 0%, #BE123C 100%)',
       shadow: '0 3px 8px rgba(225, 29, 72, 0.16)',
+      tag: 'Scam Protection',
       title: 'Report Scammers',
       desc: 'Help and protect others from fraud.'
     },
@@ -21,6 +23,7 @@ export default function WhyChooseSection() {
       icon: MapPin,
       gradient: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
       shadow: '0 3px 8px rgba(16, 185, 129, 0.16)',
+      tag: 'GPS Search',
       title: 'Location Based Search',
       desc: 'Find shops near you with ease.'
     },
@@ -28,6 +31,7 @@ export default function WhyChooseSection() {
       icon: Shield,
       gradient: 'linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%)',
       shadow: '0 3px 8px rgba(139, 92, 246, 0.16)',
+      tag: 'Real Reviews',
       title: 'Trusted Platform',
       desc: 'Real reviews, real people, real shops.'
     },
@@ -35,6 +39,7 @@ export default function WhyChooseSection() {
       icon: MapPin,
       gradient: 'linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%)',
       shadow: '0 3px 8px rgba(14, 165, 233, 0.16)',
+      tag: 'Tamil Nadu Wide',
       title: '38 Districts Covered',
       desc: 'From Chennai to Kanyakumari.'
     },
@@ -42,6 +47,7 @@ export default function WhyChooseSection() {
       icon: Headphones,
       gradient: 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)',
       shadow: '0 3px 8px rgba(245, 158, 11, 0.16)',
+      tag: 'Always Active',
       title: '24/7 Support',
       desc: "We're here to help you always."
     }
@@ -51,7 +57,7 @@ export default function WhyChooseSection() {
     <section 
       id="why-choose"
       style={{
-        padding: '2.25rem 0',
+        padding: '3.5rem 0',
         backgroundColor: '#FFFFFF',
         borderBottom: '1px solid #E2E8F0',
         fontFamily: 'var(--font-sans, system-ui, sans-serif)'
@@ -60,7 +66,7 @@ export default function WhyChooseSection() {
       <div className="container">
         
         {/* Section Header */}
-        <div style={{ marginBottom: '1.5rem' }}>
+        <div style={{ marginBottom: '1.75rem' }}>
           <h2 style={{
             fontSize: '2.25rem',
             fontWeight: 850,
@@ -80,7 +86,7 @@ export default function WhyChooseSection() {
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: '1rem'
+          gap: '1.15rem'
         }} className="why-choose-cards-full">
           {features.map((feat, idx) => {
             const Icon = feat.icon;
@@ -90,16 +96,34 @@ export default function WhyChooseSection() {
                 style={{
                   backgroundColor: '#F8FAFC',
                   borderRadius: '16px',
-                  padding: '1.25rem 1.15rem',
+                  padding: '1.35rem 1.25rem',
                   border: '1px solid #E2E8F0',
-                  boxShadow: '0 4px 12px rgba(15, 23, 42, 0.02)',
-                  transition: 'all 0.25s ease',
+                  boxShadow: '0 4px 14px rgba(15, 23, 42, 0.04)',
+                  transition: 'all 0.25s cubic-bezier(0.16, 1, 0.3, 1)',
                   display: 'flex',
                   flexDirection: 'column',
-                  alignItems: 'flex-start'
+                  alignItems: 'flex-start',
+                  position: 'relative'
                 }}
                 className="why-choose-single-card"
               >
+                {/* Subtle Corner Trust Badge */}
+                <span style={{
+                  position: 'absolute',
+                  top: '1rem',
+                  right: '1rem',
+                  fontSize: '0.68rem',
+                  fontWeight: 700,
+                  color: '#475569',
+                  backgroundColor: '#FFFFFF',
+                  border: '1px solid #E2E8F0',
+                  padding: '0.15rem 0.5rem',
+                  borderRadius: '99px',
+                  lineHeight: 1.2
+                }}>
+                  {feat.tag}
+                </span>
+
                 {/* Custom Gradient Badge Icon */}
                 <div style={{
                   background: feat.gradient,
@@ -144,9 +168,9 @@ export default function WhyChooseSection() {
 
       <style>{`
         .why-choose-single-card:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 10px 22px -4px rgba(37, 99, 235, 0.1) !important;
-          border-color: #BFDBFE !important;
+          transform: translateY(-4px) !important;
+          box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.08) !important;
+          border-color: #93C5FD !important;
           background-color: #FFFFFF !important;
         }
         @media (max-width: 900px) {

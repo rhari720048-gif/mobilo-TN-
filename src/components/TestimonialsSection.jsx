@@ -27,7 +27,7 @@ export default function TestimonialsSection() {
     <section 
       id="testimonials"
       style={{
-        padding: '4rem 0',
+        padding: '3.5rem 0',
         backgroundColor: '#F8FAFC',
         borderBottom: '1px solid #E2E8F0'
       }}
@@ -35,7 +35,7 @@ export default function TestimonialsSection() {
       <div className="container">
         
         {/* Header */}
-        <div style={{ marginBottom: '2.5rem' }}>
+        <div style={{ marginBottom: '2rem' }}>
           <h2 style={{
             fontSize: '2.25rem',
             fontWeight: 850,
@@ -46,7 +46,7 @@ export default function TestimonialsSection() {
           }}>
             Trusted by People Across Tamil Nadu
           </h2>
-          <p style={{ fontSize: '1rem', color: '#64748B', fontWeight: 500 }}>
+          <p style={{ fontSize: '1rem', color: '#64748B', fontWeight: 500, margin: 0 }}>
             Real users. Real stories. A safer shopping experience.
           </p>
         </div>
@@ -55,7 +55,7 @@ export default function TestimonialsSection() {
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '1.5rem'
+          gap: '1.25rem'
         }}>
           {testimonials.map((t, idx) => (
             <div 
@@ -65,11 +65,11 @@ export default function TestimonialsSection() {
                 borderRadius: '16px',
                 padding: '1.5rem',
                 border: '1px solid #E2E8F0',
-                boxShadow: '0 4px 12px rgba(15, 23, 42, 0.03)',
+                boxShadow: '0 4px 14px rgba(15, 23, 42, 0.04)',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                transition: 'all 0.25s ease'
+                transition: 'all 0.25s cubic-bezier(0.16, 1, 0.3, 1)'
               }}
               className="testimonial-card"
             >
@@ -108,9 +108,9 @@ export default function TestimonialsSection() {
 
       <style>{`
         .testimonial-card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 12px 24px -6px rgba(37, 99, 235, 0.12) !important;
-          border-color: #BFDBFE !important;
+          transform: translateY(-4px) !important;
+          box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.08) !important;
+          border-color: #93C5FD !important;
         }
       `}</style>
     </section>

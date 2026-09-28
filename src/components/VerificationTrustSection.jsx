@@ -40,7 +40,7 @@ export default function VerificationTrustSection() {
     <section 
       id="verification-trust"
       style={{
-        padding: '3rem 0',
+        padding: '3.5rem 0',
         backgroundColor: '#FFFFFF',
         borderTop: '1px solid #E2E8F0',
         borderBottom: '1px solid #E2E8F0',

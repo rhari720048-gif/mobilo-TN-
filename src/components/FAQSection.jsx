@@ -35,7 +35,7 @@ export default function FAQSection() {
     <section 
       id="faq"
       style={{
-        padding: '3rem 0',
+        padding: '3.5rem 0',
         backgroundColor: '#FFFFFF',
         borderBottom: '1px solid #E2E8F0'
       }}
@@ -79,7 +79,7 @@ export default function FAQSection() {
                   padding: '1.15rem 1.25rem',
                   cursor: 'pointer',
                   transition: 'all 0.2s ease',
-                  boxShadow: isOpen ? '0 4px 14px rgba(37, 99, 235, 0.08)' : '0 1px 3px rgba(0,0,0,0.02)',
+                  boxShadow: isOpen ? '0 4px 14px rgba(37, 99, 235, 0.08)' : '0 4px 14px rgba(15, 23, 42, 0.04)',
                   alignSelf: 'start'
                 }}
               >

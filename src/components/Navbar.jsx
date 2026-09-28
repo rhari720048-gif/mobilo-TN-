@@ -57,24 +57,25 @@ export default function Navbar({
         <a 
           href="#" 
           onClick={(e) => { e.preventDefault(); scrollTo('hero', 'home'); }} 
-          style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', textDecoration: 'none', flexShrink: 0 }}
+          style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', flexShrink: 0 }}
         >
           <div style={{
             background: 'linear-gradient(135deg, #1D4ED8 0%, #2563EB 100%)',
             color: '#FFFFFF',
-            width: '38px',
-            height: '38px',
+            width: '36px',
+            height: '36px',
             borderRadius: '10px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+            flexShrink: 0,
             boxShadow: '0 3px 10px rgba(37, 99, 235, 0.25)'
           }}>
-            <ShieldCheck size={22} />
+            <ShieldCheck size={20} />
           </div>
           <div>
             <div style={{
-              fontSize: '1.25rem',
+              fontSize: '1.15rem',
               fontWeight: 900,
               fontFamily: 'var(--font-sans)',
               color: '#0F172A',
@@ -83,7 +84,7 @@ export default function Navbar({
             }}>
               MOBILO <span style={{ color: '#2563EB' }}>TN</span>
             </div>
-            <div style={{ fontSize: '0.65rem', color: '#3B82F6', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.06em', marginTop: '3px' }}>
+            <div className="brand-subtitle-desktop" style={{ fontSize: '0.6rem', color: '#3B82F6', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em', marginTop: '2px' }}>
               VERIFIED PLATFORM
             </div>
           </div>
@@ -126,79 +127,86 @@ export default function Navbar({
         </nav>
 
         {/* Right Action Controls */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', flexShrink: 0 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', flexShrink: 0, minWidth: 0 }}>
           
           {/* Location Selector Button */}
           <button 
             onClick={onOpenLocationModal} 
+            className="nav-location-btn"
             style={{
               fontWeight: 600,
               color: '#1E293B',
-              fontSize: '0.825rem',
+              fontSize: '0.8rem',
               display: 'flex',
               alignItems: 'center',
-              gap: '0.35rem',
+              gap: '0.25rem',
               backgroundColor: '#F1F5F9',
-              padding: '0.45rem 0.85rem',
+              padding: '0.4rem 0.65rem',
               borderRadius: '8px',
               border: '1px solid #E2E8F0',
-              transition: 'all 0.15s ease'
+              transition: 'all 0.15s ease',
+              maxWidth: '130px',
+              flexShrink: 1
             }}
             title="Click to Choose Location"
           >
-            <MapPin size={14} color="#2563EB" />
-            <span>{selectedDistrict}</span>
-            <ChevronDown size={13} color="#64748B" />
+            <MapPin size={13} color="#2563EB" style={{ flexShrink: 0 }} />
+            <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+              {selectedDistrict}
+            </span>
+            <ChevronDown size={12} color="#64748B" style={{ flexShrink: 0 }} />
           </button>
 
           {/* Report Scammer Pill Button */}
           <button 
             onClick={onOpenReportScammer}
+            className="nav-action-btn hide-mobile-small"
             style={{ 
               backgroundColor: '#EF4444', 
               color: '#FFFFFF',
               fontWeight: 700,
-              fontSize: '0.825rem',
-              padding: '0.48rem 1rem',
+              fontSize: '0.8rem',
+              padding: '0.42rem 0.85rem',
               borderRadius: '8px',
               display: 'inline-flex',
               alignItems: 'center',
-              gap: '0.4rem',
+              gap: '0.35rem',
               boxShadow: '0 2px 8px rgba(239, 68, 68, 0.25)'
             }}
           >
-            <AlertTriangle size={15} />
+            <AlertTriangle size={14} />
             <span className="hide-mobile">Report Scammer</span>
           </button>
 
           {/* Shop Login Pill Button */}
           <button 
             onClick={() => alert("Shop Owner Login will be enabled in Phase 3/4!")}
+            className="nav-action-btn hide-mobile-small"
             style={{ 
               backgroundColor: '#2563EB', 
               color: '#FFFFFF',
               fontWeight: 700,
-              fontSize: '0.825rem',
-              padding: '0.48rem 1rem',
+              fontSize: '0.8rem',
+              padding: '0.42rem 0.85rem',
               borderRadius: '8px',
               display: 'inline-flex',
               alignItems: 'center',
-              gap: '0.4rem',
+              gap: '0.35rem',
               boxShadow: '0 2px 8px rgba(37, 99, 235, 0.25)'
             }}
           >
-            <Store size={15} />
+            <Store size={14} />
             <span className="hide-mobile">Shop Login</span>
           </button>
 
           {/* Mobile Toggle */}
           <button 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            style={{ padding: '0.4rem', color: '#0F172A' }}
+            style={{ padding: '0.35rem', color: '#0F172A', flexShrink: 0 }}
             className="mobile-toggle"
             aria-label="Toggle Navigation Menu"
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
 
@@ -224,13 +232,22 @@ export default function Navbar({
             <Home size={16} color="#2563EB" /> Home
           </button>
           <button onClick={() => { setMobileMenuOpen(false); onOpenAboutModal(); }} style={{ textAlign: 'left', fontWeight: 600, fontSize: '0.9rem', color: '#0F172A', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <Info size={16} color="#64748B" /> About
+            <Info size={16} color="#64748B" /> About Us
           </button>
           <button onClick={() => scrollTo('scammers', 'scammers')} style={{ textAlign: 'left', fontWeight: 700, fontSize: '0.9rem', color: '#EF4444', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <ShieldAlert size={16} color="#EF4444" /> Verified Scammer
+            <ShieldAlert size={16} color="#EF4444" /> Verified Scammers
           </button>
           <button onClick={() => { setMobileMenuOpen(false); onOpenContactModal(); }} style={{ textAlign: 'left', fontWeight: 600, fontSize: '0.9rem', color: '#0F172A', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <PhoneCall size={16} color="#2563EB" /> Contact Us
+          </button>
+          
+          <div style={{ height: '1px', backgroundColor: '#E2E8F0', margin: '0.25rem 0' }} />
+
+          <button onClick={() => { setMobileMenuOpen(false); onOpenReportScammer(); }} style={{ textAlign: 'left', fontWeight: 700, fontSize: '0.875rem', color: '#B91C1C', backgroundColor: '#FEF2F2', padding: '0.6rem 0.85rem', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <AlertTriangle size={16} color="#EF4444" /> Report Scammer
+          </button>
+          <button onClick={() => { setMobileMenuOpen(false); alert("Shop Owner Login will be enabled in Phase 3/4!"); }} style={{ textAlign: 'left', fontWeight: 700, fontSize: '0.875rem', color: '#1D4ED8', backgroundColor: '#EFF6FF', padding: '0.6rem 0.85rem', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <Store size={16} color="#2563EB" /> Shop Owner Login
           </button>
         </div>
       )}
@@ -272,7 +289,19 @@ export default function Navbar({
           .mobile-toggle { display: none !important; }
         }
         @media (max-width: 640px) {
-          .hide-mobile { display: none; }
+          .hide-mobile { display: none !important; }
+          .brand-subtitle-desktop { display: none !important; }
+          .nav-location-btn {
+            max-width: 100px !important;
+            padding: 0.35rem 0.5rem !important;
+            font-size: 0.75rem !important;
+          }
+        }
+        @media (max-width: 480px) {
+          .hide-mobile-small { display: none !important; }
+          .nav-location-btn {
+            max-width: 90px !important;
+          }
         }
       `}</style>
     </header>

@@ -409,7 +409,7 @@ export default function Hero({
               <div style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: '1rem',
+                gap: '0.85rem',
                 width: 'max-content',
                 maxWidth: 'none',
                 flexWrap: 'nowrap',
@@ -418,90 +418,90 @@ export default function Hero({
               }}>
                 
                 {/* Feature 1 - Verified Shops Only */}
-                <div className="feature-badge-hover" style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+                <div className="feature-badge-hover" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   <div className="badge-circle-icon" style={{ 
                     background: 'linear-gradient(135deg, #10B981 0%, #059669 100%)', 
-                    width: '42px',
-                    height: '42px',
-                    borderRadius: '12px', 
+                    width: '36px',
+                    height: '36px',
+                    borderRadius: '10px', 
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0,
                     boxShadow: '0 3px 8px rgba(16, 185, 129, 0.16)'
                   }}>
-                    <ShieldCheck size={21} color="#FFFFFF" strokeWidth={2.2} />
+                    <ShieldCheck size={18} color="#FFFFFF" strokeWidth={2.2} />
                   </div>
-                  <span style={{ fontSize: '0.825rem', fontWeight: 700, color: '#0F172A', lineHeight: 1.25, fontFamily: 'Inter, sans-serif' }}>
+                  <span style={{ fontSize: '0.78rem', fontWeight: 750, color: '#0F172A', lineHeight: 1.2, fontFamily: 'Inter, sans-serif' }}>
                     Verified <br />Shops Only
                   </span>
                 </div>
 
-                <div style={{ height: '32px', width: '1px', backgroundColor: '#CBD5E1', margin: '0 0.25rem' }} className="hide-mobile" />
+                <div style={{ height: '28px', width: '1px', backgroundColor: '#CBD5E1', margin: '0 0.15rem' }} className="hide-mobile" />
 
                 {/* Feature 2 - 38 Districts Covered */}
-                <div className="feature-badge-hover" style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+                <div className="feature-badge-hover" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   <div className="badge-circle-icon" style={{ 
                     background: 'linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%)', 
-                    width: '42px',
-                    height: '42px',
-                    borderRadius: '12px', 
+                    width: '36px',
+                    height: '36px',
+                    borderRadius: '10px', 
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0,
                     boxShadow: '0 3px 8px rgba(14, 165, 233, 0.16)'
                   }}>
-                    <MapPin size={21} color="#FFFFFF" strokeWidth={2.2} />
+                    <MapPin size={18} color="#FFFFFF" strokeWidth={2.2} />
                   </div>
-                  <span style={{ fontSize: '0.825rem', fontWeight: 700, color: '#0F172A', lineHeight: 1.25, fontFamily: 'Inter, sans-serif' }}>
+                  <span style={{ fontSize: '0.78rem', fontWeight: 750, color: '#0F172A', lineHeight: 1.2, fontFamily: 'Inter, sans-serif' }}>
                     38 Districts <br />Covered
                   </span>
                 </div>
 
-                <div style={{ height: '32px', width: '1px', backgroundColor: '#CBD5E1', margin: '0 0.25rem' }} className="hide-mobile" />
+                <div style={{ height: '28px', width: '1px', backgroundColor: '#CBD5E1', margin: '0 0.15rem' }} className="hide-mobile" />
 
                 {/* Feature 3 - Physical Store Inspection */}
-                <div className="feature-badge-hover" style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+                <div className="feature-badge-hover" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   <div className="badge-circle-icon" style={{ 
                     background: 'linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%)', 
-                    width: '42px',
-                    height: '42px',
-                    borderRadius: '12px', 
+                    width: '36px',
+                    height: '36px',
+                    borderRadius: '10px', 
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0,
                     boxShadow: '0 3px 8px rgba(139, 92, 246, 0.16)'
                   }}>
-                    <Store size={21} color="#FFFFFF" strokeWidth={2.2} />
+                    <Store size={18} color="#FFFFFF" strokeWidth={2.2} />
                   </div>
-                  <span style={{ fontSize: '0.825rem', fontWeight: 700, color: '#0F172A', lineHeight: 1.25, fontFamily: 'Inter, sans-serif' }}>
+                  <span style={{ fontSize: '0.78rem', fontWeight: 750, color: '#0F172A', lineHeight: 1.2, fontFamily: 'Inter, sans-serif' }}>
                     Physical Store <br />Inspection
                   </span>
                 </div>
 
-                <div style={{ height: '32px', width: '1px', backgroundColor: '#CBD5E1', margin: '0 0.25rem' }} className="hide-mobile" />
+                <div style={{ height: '28px', width: '1px', backgroundColor: '#CBD5E1', margin: '0 0.15rem' }} className="hide-mobile" />
 
                 {/* Feature 4 - Stop Scammers */}
-                <div className="feature-badge-hover" style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+                <div className="feature-badge-hover" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   <div className="badge-circle-icon" style={{ 
                     background: 'linear-gradient(135deg, #E11D48 0%, #BE123C 100%)', 
-                    width: '42px',
-                    height: '42px',
-                    borderRadius: '12px', 
+                    width: '36px',
+                    height: '36px',
+                    borderRadius: '10px', 
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0,
                     boxShadow: '0 3px 8px rgba(225, 29, 72, 0.16)'
                   }}>
-                    <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
                       <circle cx="12" cy="12" r="9" />
                       <line x1="5.6" y1="5.6" x2="18.4" y2="18.4" />
                     </svg>
                   </div>
-                  <span style={{ fontSize: '0.825rem', fontWeight: 700, color: '#0F172A', lineHeight: 1.25, fontFamily: 'Inter, sans-serif' }}>
+                  <span style={{ fontSize: '0.78rem', fontWeight: 750, color: '#0F172A', lineHeight: 1.2, fontFamily: 'Inter, sans-serif' }}>
                     Stop <br />Scammers
                   </span>
                 </div>

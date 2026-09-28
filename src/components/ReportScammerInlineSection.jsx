@@ -66,16 +66,20 @@ export default function ReportScammerInlineSection({ districts, onSubmitReport }
           
           {/* Header */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.75rem', marginBottom: '1.25rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
               <div style={{
-                backgroundColor: '#EF4444',
+                background: 'linear-gradient(135deg, #E11D48 0%, #BE123C 100%)',
                 color: '#FFFFFF',
-                padding: '0.4rem',
-                borderRadius: '8px',
+                width: '36px',
+                height: '36px',
+                borderRadius: '10px',
                 display: 'flex',
-                alignItems: 'center'
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexShrink: 0,
+                boxShadow: '0 3px 8px rgba(225, 29, 72, 0.16)'
               }}>
-                <AlertTriangle size={18} />
+                <AlertTriangle size={19} color="#FFFFFF" strokeWidth={2.2} />
               </div>
               <div>
                 <h2 style={{ fontSize: '1.35rem', fontWeight: 850, color: '#991B1B', margin: 0, lineHeight: 1.2 }}>

@@ -72,8 +72,19 @@ export default function ContactSection() {
                 gap: '1rem',
                 boxShadow: '0 2px 8px rgba(0,0,0,0.03)'
               }}>
-                <div style={{ backgroundColor: '#EFF6FF', color: '#2563EB', width: '42px', height: '42px', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                  <Phone size={20} />
+                <div style={{
+                  background: 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)',
+                  color: '#FFFFFF',
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '10px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                  boxShadow: '0 3px 8px rgba(37, 99, 235, 0.16)'
+                }}>
+                  <Phone size={19} color="#FFFFFF" strokeWidth={2.2} />
                 </div>
                 <div>
                   <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#64748B', textTransform: 'uppercase' }}>Helpline</div>
@@ -92,8 +103,19 @@ export default function ContactSection() {
                 gap: '1rem',
                 boxShadow: '0 2px 8px rgba(0,0,0,0.03)'
               }}>
-                <div style={{ backgroundColor: '#EFF6FF', color: '#2563EB', width: '42px', height: '42px', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                  <Mail size={20} />
+                <div style={{
+                  background: 'linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%)',
+                  color: '#FFFFFF',
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '10px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                  boxShadow: '0 3px 8px rgba(14, 165, 233, 0.16)'
+                }}>
+                  <Mail size={19} color="#FFFFFF" strokeWidth={2.2} />
                 </div>
                 <div>
                   <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#64748B', textTransform: 'uppercase' }}>Official Email</div>
@@ -111,8 +133,19 @@ export default function ContactSection() {
                 gap: '1rem',
                 boxShadow: '0 2px 8px rgba(0,0,0,0.03)'
               }}>
-                <div style={{ backgroundColor: '#EFF6FF', color: '#2563EB', width: '42px', height: '42px', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                  <MapPin size={20} />
+                <div style={{
+                  background: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
+                  color: '#FFFFFF',
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '10px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                  boxShadow: '0 3px 8px rgba(16, 185, 129, 0.16)'
+                }}>
+                  <MapPin size={19} color="#FFFFFF" strokeWidth={2.2} />
                 </div>
                 <div>
                   <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#64748B', textTransform: 'uppercase' }}>Headquarters</div>

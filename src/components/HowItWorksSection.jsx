@@ -6,24 +6,32 @@ export default function HowItWorksSection() {
     {
       num: '1',
       icon: MapPin,
+      gradient: 'linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%)',
+      shadow: '0 3px 8px rgba(14, 165, 233, 0.16)',
       title: '1. Select Location',
       desc: 'Choose your district, city or town.'
     },
     {
       num: '2',
       icon: Store,
+      gradient: 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)',
+      shadow: '0 3px 8px rgba(37, 99, 235, 0.16)',
       title: '2. Browse Shops',
       desc: 'Explore verified mobile shops near you.'
     },
     {
       num: '3',
       icon: CheckCircle2,
+      gradient: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
+      shadow: '0 3px 8px rgba(16, 185, 129, 0.16)',
       title: '3. Check Details',
       desc: 'View ratings, location and contact info.'
     },
     {
       num: '4',
       icon: AlertTriangle,
+      gradient: 'linear-gradient(135deg, #E11D48 0%, #BE123C 100%)',
+      shadow: '0 3px 8px rgba(225, 29, 72, 0.16)',
       title: '4. Report if Needed',
       desc: 'Help others by reporting scammers or fake shops.'
     }
@@ -98,9 +106,9 @@ export default function HowItWorksSection() {
                     }}
                     className="how-it-works-single-card"
                   >
-                    {/* Compact MOBILO Official Blue Gradient Icon Badge */}
+                    {/* Compact Custom Gradient Icon Badge */}
                     <div style={{
-                      background: 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)',
+                      background: step.gradient,
                       color: '#FFFFFF',
                       width: '36px',
                       height: '36px',
@@ -110,7 +118,7 @@ export default function HowItWorksSection() {
                       justifyContent: 'center',
                       marginBottom: '0.65rem',
                       flexShrink: 0,
-                      boxShadow: '0 3px 8px rgba(37, 99, 235, 0.25)'
+                      boxShadow: step.shadow
                     }}>
                       <Icon size={19} color="#FFFFFF" strokeWidth={2.2} />
                     </div>

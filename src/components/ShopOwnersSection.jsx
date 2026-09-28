@@ -6,23 +6,31 @@ export default function ShopOwnersSection() {
     { 
       num: 1, 
       title: 'Register Your Shop',
-      icon: UserPlus 
+      icon: UserPlus,
+      gradient: 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)',
+      shadow: '0 3px 8px rgba(37, 99, 235, 0.16)'
     },
     { 
       num: 2, 
       title: 'Physical Verification', 
       subtitle: 'by District Admins',
-      icon: FileCheck 
+      icon: FileCheck,
+      gradient: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
+      shadow: '0 3px 8px rgba(16, 185, 129, 0.16)'
     },
     { 
       num: 3, 
       title: 'Get Approved', 
-      icon: Award 
+      icon: Award,
+      gradient: 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)',
+      shadow: '0 3px 8px rgba(245, 158, 11, 0.16)'
     },
     { 
       num: 4, 
       title: 'Manage Your Shop', 
-      icon: LayoutDashboard 
+      icon: LayoutDashboard,
+      gradient: 'linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%)',
+      shadow: '0 3px 8px rgba(139, 92, 246, 0.16)'
     }
   ];
 
@@ -47,16 +55,17 @@ export default function ShopOwnersSection() {
           {/* Header */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.4rem' }}>
             <div style={{
-              backgroundColor: '#2563EB',
+              background: 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)',
               color: '#FFFFFF',
-              padding: '0.5rem',
-              borderRadius: '12px',
+              width: '38px',
+              height: '38px',
+              borderRadius: '10px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              boxShadow: '0 4px 12px rgba(37, 99, 235, 0.25)'
+              boxShadow: '0 3px 8px rgba(37, 99, 235, 0.16)'
             }}>
-              <Store size={22} />
+              <Store size={20} color="#FFFFFF" strokeWidth={2.2} />
             </div>
             <h2 style={{ fontSize: '1.75rem', fontWeight: 850, color: '#0F172A', margin: 0 }}>
               For Mobile Shop Owners
@@ -112,30 +121,31 @@ export default function ShopOwnersSection() {
                 >
                   {/* Step Number Pill */}
                   <div style={{
-                    backgroundColor: '#2563EB',
+                    background: s.gradient,
                     color: '#FFFFFF',
-                    width: '30px',
-                    height: '30px',
+                    width: '28px',
+                    height: '28px',
                     borderRadius: '50%',
-                    fontSize: '0.85rem',
+                    fontSize: '0.82rem',
                     fontWeight: 800,
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    marginBottom: '0.6rem',
-                    boxShadow: '0 2px 8px rgba(37, 99, 235, 0.25)'
+                    marginBottom: '0.55rem',
+                    boxShadow: s.shadow
                   }}>
                     {s.num}
                   </div>
 
                   <div style={{
-                    backgroundColor: '#EFF6FF',
+                    background: s.gradient,
                     padding: '0.45rem',
                     borderRadius: '10px',
-                    color: '#2563EB',
-                    marginBottom: '0.45rem'
+                    color: '#FFFFFF',
+                    marginBottom: '0.45rem',
+                    boxShadow: s.shadow
                   }}>
-                    <IconComponent size={19} />
+                    <IconComponent size={19} color="#FFFFFF" strokeWidth={2.2} />
                   </div>
 
                   <h3 style={{ fontSize: '0.9rem', fontWeight: 800, color: '#0F172A', margin: 0, lineHeight: 1.3 }}>

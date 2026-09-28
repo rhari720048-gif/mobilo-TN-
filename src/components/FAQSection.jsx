@@ -52,7 +52,7 @@ export default function FAQSection() {
             lineHeight: 1.2,
             marginBottom: '0.4rem'
           }}>
-            Frequently Asked Questions
+            Frequently Asked <span style={{ color: '#2563EB' }}>Questions</span>
           </h2>
           <p style={{ fontSize: '0.95rem', color: '#64748B', fontWeight: 500 }}>
             Find answers to common questions about MOBILO TN.

@@ -77,7 +77,7 @@ export default function VerificationTrustSection() {
                 <ShieldCheck size={22} color="#FFFFFF" />
               </div>
               <h2 style={{ fontSize: '1.65rem', fontWeight: 850, color: '#0F172A', lineHeight: 1.2 }}>
-                Shop Verification You Can Trust
+                Shop Verification You Can <span style={{ color: '#2563EB' }}>Trust</span>
               </h2>
             </div>
 

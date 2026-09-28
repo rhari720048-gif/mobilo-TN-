@@ -52,7 +52,7 @@ export default function ContactSection() {
             </div>
 
             <h2 style={{ fontSize: '2rem', fontWeight: 850, color: '#0F172A', letterSpacing: '-0.025em', lineHeight: 1.2, marginBottom: '0.75rem' }}>
-              Get In Touch With MOBILO TN
+              Get In Touch With <span style={{ color: '#2563EB' }}>MOBILO TN</span>
             </h2>
 
             <p style={{ fontSize: '0.95rem', color: '#64748B', lineHeight: 1.6, marginBottom: '2rem' }}>

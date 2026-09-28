@@ -64,7 +64,7 @@ export default function ShopOwnersSection() {
               <Store size={20} color="#FFFFFF" strokeWidth={2.2} />
             </div>
             <h2 style={{ fontSize: '1.75rem', fontWeight: 850, color: '#0F172A', margin: 0 }}>
-              For Mobile Shop Owners
+              For Mobile Shop <span style={{ color: '#2563EB' }}>Owners</span>
             </h2>
           </div>
 

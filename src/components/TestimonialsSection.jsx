@@ -44,7 +44,7 @@ export default function TestimonialsSection() {
             marginBottom: '0.4rem',
             lineHeight: 1.2
           }}>
-            Trusted by People Across Tamil Nadu
+            Trusted by People Across <span style={{ color: '#2563EB' }}>Tamil Nadu</span>
           </h2>
           <p style={{ fontSize: '1rem', color: '#64748B', fontWeight: 500, margin: 0 }}>
             Real users. Real stories. A safer shopping experience.

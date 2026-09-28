@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+  </defs>
+  <!-- Rounded Rect Badge -->
+  <rect width="512" height="512" rx="120" fill="url(#shieldGrad)"/>
+  
+  <!-- Shield Contour -->
+  <path d="M256 90 C 330 90, 390 70, 410 58 V 220 C 410 336, 330 406, 256 442 C 182 406, 102 336, 102 220 V 58 C 122 70, 182 90, 256 90 Z" fill="none" stroke="#FFFFFF" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Verified Checkmark -->
+  <path d="M190 240 L 238 288 L 334 176" fill="none" stroke="#FFFFFF" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

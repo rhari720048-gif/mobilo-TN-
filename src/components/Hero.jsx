@@ -420,16 +420,17 @@ export default function Hero({
                 {/* Feature 1 - Verified Shops Only */}
                 <div className="feature-badge-hover" style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
                   <div className="badge-circle-icon" style={{ 
-                    backgroundColor: '#6EE7B7', 
+                    background: 'linear-gradient(135deg, #10B981 0%, #059669 100%)', 
                     width: '42px',
                     height: '42px',
-                    borderRadius: '50%', 
+                    borderRadius: '12px', 
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    flexShrink: 0
+                    flexShrink: 0,
+                    boxShadow: '0 4px 12px rgba(16, 185, 129, 0.35)'
                   }}>
-                    <ShieldCheck size={21} color="#FFFFFF" fill="#047857" />
+                    <ShieldCheck size={21} color="#FFFFFF" strokeWidth={2.2} />
                   </div>
                   <span style={{ fontSize: '0.825rem', fontWeight: 700, color: '#0F172A', lineHeight: 1.25, fontFamily: 'Inter, sans-serif' }}>
                     Verified <br />Shops Only
@@ -441,16 +442,17 @@ export default function Hero({
                 {/* Feature 2 - 38 Districts Covered */}
                 <div className="feature-badge-hover" style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
                   <div className="badge-circle-icon" style={{ 
-                    backgroundColor: '#7DD3FC', 
+                    background: 'linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%)', 
                     width: '42px',
                     height: '42px',
-                    borderRadius: '50%', 
+                    borderRadius: '12px', 
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    flexShrink: 0
+                    flexShrink: 0,
+                    boxShadow: '0 4px 12px rgba(14, 165, 233, 0.35)'
                   }}>
-                    <MapPin size={21} color="#FFFFFF" fill="#0284C7" />
+                    <MapPin size={21} color="#FFFFFF" strokeWidth={2.2} />
                   </div>
                   <span style={{ fontSize: '0.825rem', fontWeight: 700, color: '#0F172A', lineHeight: 1.25, fontFamily: 'Inter, sans-serif' }}>
                     38 Districts <br />Covered
@@ -462,16 +464,17 @@ export default function Hero({
                 {/* Feature 3 - Physical Store Inspection */}
                 <div className="feature-badge-hover" style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
                   <div className="badge-circle-icon" style={{ 
-                    backgroundColor: '#D8B4FE', 
+                    background: 'linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%)', 
                     width: '42px',
                     height: '42px',
-                    borderRadius: '50%', 
+                    borderRadius: '12px', 
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    flexShrink: 0
+                    flexShrink: 0,
+                    boxShadow: '0 4px 12px rgba(139, 92, 246, 0.35)'
                   }}>
-                    <Store size={21} color="#7E22CE" strokeWidth={2.4} />
+                    <Store size={21} color="#FFFFFF" strokeWidth={2.2} />
                   </div>
                   <span style={{ fontSize: '0.825rem', fontWeight: 700, color: '#0F172A', lineHeight: 1.25, fontFamily: 'Inter, sans-serif' }}>
                     Physical Store <br />Inspection
@@ -483,16 +486,17 @@ export default function Hero({
                 {/* Feature 4 - Stop Scammers */}
                 <div className="feature-badge-hover" style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
                   <div className="badge-circle-icon" style={{ 
-                    backgroundColor: '#FCA5A5', 
+                    background: 'linear-gradient(135deg, #E11D48 0%, #BE123C 100%)', 
                     width: '42px',
                     height: '42px',
-                    borderRadius: '50%', 
+                    borderRadius: '12px', 
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    flexShrink: 0
+                    flexShrink: 0,
+                    boxShadow: '0 4px 12px rgba(225, 29, 72, 0.35)'
                   }}>
-                    <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#B91C1C" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
                       <circle cx="12" cy="12" r="9" />
                       <line x1="5.6" y1="5.6" x2="18.4" y2="18.4" />
                     </svg>

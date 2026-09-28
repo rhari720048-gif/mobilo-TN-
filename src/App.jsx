@@ -18,11 +18,13 @@ import ReportScammerModal from './components/ReportScammerModal';
 import LocationModal from './components/LocationModal';
 import AboutModal from './components/AboutModal';
 import ContactModal from './components/ContactModal';
+import ShopLoginPage from './components/ShopLoginPage';
 
 import { TN_DISTRICTS, MOCK_VERIFIED_SHOPS, MOCK_APPROVED_SCAMMERS } from './data/mockData';
 import { Store, ArrowRight } from 'lucide-react';
 
 export default function App() {
+  const [currentView, setCurrentView] = useState('home'); // 'home' | 'shop-login'
   const [selectedDistrict, setSelectedDistrict] = useState("All Districts");
   const [selectedTown, setSelectedTown] = useState("All Areas");
   const [searchQuery, setSearchQuery] = useState("");
@@ -32,9 +34,21 @@ export default function App() {
   const [locationModalOpen, setLocationModalOpen] = useState(false);
   const [aboutModalOpen, setAboutModalOpen] = useState(false);
   const [contactModalOpen, setContactModalOpen] = useState(false);
+  const [shopLoginInitialTab, setShopLoginInitialTab] = useState('login');
 
   const [scammersList, setScammersList] = useState(MOCK_APPROVED_SCAMMERS);
   const [shopsList] = useState(MOCK_VERIFIED_SHOPS);
+
+  const openShopLoginPageWithTab = (tab = 'login') => {
+    setShopLoginInitialTab(tab);
+    setCurrentView('shop-login');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleNavigateHome = () => {
+    setCurrentView('home');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const filteredShops = shopsList.filter(shop => {
     const matchesDistrict = selectedDistrict === "All Districts" || shop.district === selectedDistrict;
@@ -64,6 +78,15 @@ export default function App() {
     setScammersList([createdReport, ...scammersList]);
   };
 
+  if (currentView === 'shop-login') {
+    return (
+      <ShopLoginPage 
+        onNavigateHome={handleNavigateHome} 
+        initialTab={shopLoginInitialTab} 
+      />
+    );
+  }
+
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: 'var(--bg-main)', paddingTop: '70px' }}>
       
@@ -74,6 +97,7 @@ export default function App() {
         onOpenLocationModal={() => setLocationModalOpen(true)}
         onOpenAboutModal={() => setAboutModalOpen(true)}
         onOpenContactModal={() => setContactModalOpen(true)}
+        onOpenShopLoginModal={openShopLoginPageWithTab}
       />
 
       {/* 2. Hero Section */}
@@ -93,13 +117,11 @@ export default function App() {
       {/* 4. How It Works? Section */}
       <HowItWorksSection />
 
-      {/* 5. For Mobile Shop Owners Section (Moved directly after How It Works) */}
-      <ShopOwnersSection />
+      {/* 5. For Mobile Shop Owners Section */}
+      <ShopOwnersSection onOpenShopLoginModal={openShopLoginPageWithTab} />
 
-      {/* 6. Shop Verification You Can Trust (Moved below For Mobile Shop Owners) */}
+      {/* 6. Shop Verification You Can Trust */}
       <VerificationTrustSection />
-
-
 
       {/* 8. Trusted by People Across Tamil Nadu */}
       <TestimonialsSection />

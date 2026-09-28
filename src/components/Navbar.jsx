@@ -18,7 +18,8 @@ export default function Navbar({
   onOpenReportScammer,
   onOpenLocationModal,
   onOpenAboutModal,
-  onOpenContactModal
+  onOpenContactModal,
+  onOpenShopLoginModal
 }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeNav, setActiveNav] = useState('home');
@@ -180,7 +181,7 @@ export default function Navbar({
 
           {/* Shop Login Pill Button */}
           <button 
-            onClick={() => alert("Shop Owner Login will be enabled in Phase 3/4!")}
+            onClick={() => onOpenShopLoginModal && onOpenShopLoginModal('login')}
             className="nav-action-btn hide-mobile-small"
             style={{ 
               backgroundColor: '#2563EB', 
@@ -246,7 +247,7 @@ export default function Navbar({
           <button onClick={() => { setMobileMenuOpen(false); onOpenReportScammer(); }} style={{ textAlign: 'left', fontWeight: 700, fontSize: '0.875rem', color: '#B91C1C', backgroundColor: '#FEF2F2', padding: '0.6rem 0.85rem', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <AlertTriangle size={16} color="#EF4444" /> Report Scammer
           </button>
-          <button onClick={() => { setMobileMenuOpen(false); alert("Shop Owner Login will be enabled in Phase 3/4!"); }} style={{ textAlign: 'left', fontWeight: 700, fontSize: '0.875rem', color: '#1D4ED8', backgroundColor: '#EFF6FF', padding: '0.6rem 0.85rem', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <button onClick={() => { setMobileMenuOpen(false); onOpenShopLoginModal && onOpenShopLoginModal('login'); }} style={{ textAlign: 'left', fontWeight: 700, fontSize: '0.875rem', color: '#1D4ED8', backgroundColor: '#EFF6FF', padding: '0.6rem 0.85rem', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <Store size={16} color="#2563EB" /> Shop Owner Login
           </button>
         </div>

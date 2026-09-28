@@ -1,7 +1,7 @@
 import React from 'react';
 import { Store, ArrowRight, ShieldCheck, UserPlus, FileCheck, Award, LayoutDashboard } from 'lucide-react';
 
-export default function ShopOwnersSection() {
+export default function ShopOwnersSection({ onOpenShopLoginModal }) {
   const steps = [
     { 
       num: 1, 
@@ -49,28 +49,73 @@ export default function ShopOwnersSection() {
         }}>
           
           {/* Header */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.4rem' }}>
-            <div style={{
-              background: 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)',
-              color: '#FFFFFF',
-              width: '38px',
-              height: '38px',
-              borderRadius: '10px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              boxShadow: '0 3px 8px rgba(37, 99, 235, 0.16)'
-            }}>
-              <Store size={20} color="#FFFFFF" strokeWidth={2.2} />
-            </div>
-            <h2 style={{ fontSize: '1.75rem', fontWeight: 850, color: '#0F172A', margin: 0 }}>
-              For Mobile Shop <span style={{ color: '#2563EB' }}>Owners</span>
-            </h2>
-          </div>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem', marginBottom: '0.85rem' }}>
+            <div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.4rem' }}>
+                <div style={{
+                  background: 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)',
+                  color: '#FFFFFF',
+                  width: '38px',
+                  height: '38px',
+                  borderRadius: '10px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  boxShadow: '0 3px 8px rgba(37, 99, 235, 0.16)'
+                }}>
+                  <Store size={20} color="#FFFFFF" strokeWidth={2.2} />
+                </div>
+                <h2 style={{ fontSize: '1.75rem', fontWeight: 850, color: '#0F172A', margin: 0 }}>
+                  For Mobile Shop <span style={{ color: '#2563EB' }}>Owners</span>
+                </h2>
+              </div>
 
-          <p style={{ fontSize: '0.95rem', color: '#64748B', marginBottom: '0.85rem' }}>
-            Register your shop, get verified by District Admins and manage your profile easily.
-          </p>
+              <p style={{ fontSize: '0.95rem', color: '#64748B', margin: 0 }}>
+                Register your shop, get verified by District Admins and manage your profile easily.
+              </p>
+            </div>
+
+            {/* Quick Action Buttons for Shop Owners */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+              <button
+                onClick={() => onOpenShopLoginModal && onOpenShopLoginModal('register')}
+                className="btn btn-primary"
+                style={{
+                  fontSize: '0.875rem',
+                  fontWeight: 700,
+                  padding: '0.6rem 1.1rem',
+                  borderRadius: '10px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.4rem'
+                }}
+              >
+                <UserPlus size={16} />
+                <span>Register Shop Now</span>
+              </button>
+
+              <button
+                onClick={() => onOpenShopLoginModal && onOpenShopLoginModal('login')}
+                style={{
+                  fontSize: '0.875rem',
+                  fontWeight: 700,
+                  padding: '0.6rem 1.1rem',
+                  borderRadius: '10px',
+                  backgroundColor: '#FFFFFF',
+                  color: '#1D4ED8',
+                  border: '1px solid #BFDBFE',
+                  cursor: 'pointer',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.4rem',
+                  transition: 'all 0.15s ease'
+                }}
+              >
+                <Store size={16} />
+                <span>Shop Login</span>
+              </button>
+            </div>
+          </div>
 
           <span style={{
             fontSize: '0.78rem',

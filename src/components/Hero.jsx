@@ -518,10 +518,10 @@ export default function Hero({
                   display: 'block',
                   marginLeft: 'auto',
                   marginRight: 0,
-                  marginTop: '-5.75rem',
-                  transform: 'scale(1.09) translate(-10px, -21px)',
+                  marginTop: '-5.25rem',
+                  transform: 'scale(1.09) translate(-10px, -10px)',
                   transformOrigin: 'right bottom',
-                  marginBottom: '-7px',
+                  marginBottom: '-12px',
                   objectFit: 'contain',
                   objectPosition: 'right bottom'
                 }}

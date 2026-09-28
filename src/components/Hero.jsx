@@ -56,7 +56,11 @@ export default function Hero({
           radial-gradient(circle at 75% 35%, #C8E5FD 0%, rgba(239, 247, 254, 0) 65%),
           linear-gradient(135deg, #F4F9FE 0%, #E3F1FE 50%, #D2E7FD 100%)
         `,
-        padding: '1.25rem 0 0 0',
+        padding: '2.5rem 0 0 0',
+        minHeight: 'calc(100vh - 70px)',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
         position: 'relative',
         overflow: 'visible',
         borderBottom: '1px solid #CDE4FA',

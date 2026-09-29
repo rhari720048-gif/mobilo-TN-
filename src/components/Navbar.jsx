@@ -19,7 +19,8 @@ export default function Navbar({
   onOpenLocationModal,
   onOpenAboutModal,
   onOpenContactModal,
-  onOpenShopLoginModal
+  onOpenShopLoginModal,
+  onOpenAdminLogin
 }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeNav, setActiveNav] = useState('home');
@@ -249,6 +250,9 @@ export default function Navbar({
           </button>
           <button onClick={() => { setMobileMenuOpen(false); onOpenShopLoginModal && onOpenShopLoginModal('login'); }} style={{ textAlign: 'left', fontWeight: 700, fontSize: '0.875rem', color: '#1D4ED8', backgroundColor: '#EFF6FF', padding: '0.6rem 0.85rem', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <Store size={16} color="#2563EB" /> Shop Owner Login
+          </button>
+          <button onClick={() => { setMobileMenuOpen(false); onOpenAdminLogin && onOpenAdminLogin(); }} style={{ textAlign: 'left', fontWeight: 700, fontSize: '0.875rem', color: '#0F172A', backgroundColor: '#F1F5F9', padding: '0.6rem 0.85rem', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <ShieldCheck size={16} color="#1E40AF" /> Admin Portal Login
           </button>
         </div>
       )}

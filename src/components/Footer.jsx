@@ -1,7 +1,7 @@
 import React from 'react';
 import { ShieldCheck } from 'lucide-react';
 
-export default function Footer({ onOpenAboutModal, onOpenContactModal, onOpenReportScammer }) {
+export default function Footer({ onOpenAboutModal, onOpenContactModal, onOpenReportScammer, onOpenAdminLogin }) {
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -169,12 +169,12 @@ export default function Footer({ onOpenAboutModal, onOpenContactModal, onOpenRep
               </li>
               <li>
                 <button 
-                  onClick={() => alert("District Admin Portal coming soon")} 
+                  onClick={onOpenAdminLogin} 
                   style={{ color: '#94A3B8', background: 'none', border: 'none', cursor: 'pointer', padding: 0, fontSize: '0.85rem' }}
                   onMouseEnter={(e) => e.target.style.color = '#FFFFFF'}
                   onMouseLeave={(e) => e.target.style.color = '#94A3B8'}
                 >
-                  District Admin
+                  District Admin Portal
                 </button>
               </li>
               <li>

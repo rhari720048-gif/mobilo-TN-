@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import WhyChooseSection from './components/WhyChooseSection';
@@ -19,12 +19,21 @@ import LocationModal from './components/LocationModal';
 import AboutModal from './components/AboutModal';
 import ContactModal from './components/ContactModal';
 import ShopLoginPage from './components/ShopLoginPage';
+import AdminLoginPage from './components/AdminLoginPage';
 
 import { TN_DISTRICTS, MOCK_VERIFIED_SHOPS, MOCK_APPROVED_SCAMMERS } from './data/mockData';
 import { Store, ArrowRight } from 'lucide-react';
 
 export default function App() {
-  const [currentView, setCurrentView] = useState('home'); // 'home' | 'shop-login'
+  // Check initial path from URL address bar
+  const getInitialView = () => {
+    const path = window.location.pathname.toLowerCase();
+    if (path === '/admin' || path === '/admin/') return 'admin-login';
+    if (path === '/shop-login' || path === '/shop-login/') return 'shop-login';
+    return 'home';
+  };
+
+  const [currentView, setCurrentView] = useState(getInitialView);
   const [selectedDistrict, setSelectedDistrict] = useState("All Districts");
   const [selectedTown, setSelectedTown] = useState("All Areas");
   const [searchQuery, setSearchQuery] = useState("");
@@ -39,13 +48,44 @@ export default function App() {
   const [scammersList, setScammersList] = useState(MOCK_APPROVED_SCAMMERS);
   const [shopsList] = useState(MOCK_VERIFIED_SHOPS);
 
+  // Sync state with address bar path changes & browser back/forward buttons
+  useEffect(() => {
+    const handlePopState = () => {
+      const path = window.location.pathname.toLowerCase();
+      if (path === '/admin' || path === '/admin/') {
+        setCurrentView('admin-login');
+      } else if (path === '/shop-login' || path === '/shop-login/') {
+        setCurrentView('shop-login');
+      } else {
+        setCurrentView('home');
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
   const openShopLoginPageWithTab = (tab = 'login') => {
     setShopLoginInitialTab(tab);
+    if (window.location.pathname !== '/shop-login') {
+      window.history.pushState({}, '', '/shop-login');
+    }
     setCurrentView('shop-login');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleOpenAdminLogin = (tab = 'login') => {
+    if (window.location.pathname !== '/admin') {
+      window.history.pushState({}, '', '/admin');
+    }
+    setCurrentView('admin-login');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const handleNavigateHome = () => {
+    if (window.location.pathname !== '/') {
+      window.history.pushState({}, '', '/');
+    }
     setCurrentView('home');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -78,6 +118,14 @@ export default function App() {
     setScammersList([createdReport, ...scammersList]);
   };
 
+  if (currentView === 'admin-login') {
+    return (
+      <AdminLoginPage 
+        onNavigateHome={handleNavigateHome} 
+      />
+    );
+  }
+
   if (currentView === 'shop-login') {
     return (
       <ShopLoginPage 
@@ -98,6 +146,7 @@ export default function App() {
         onOpenAboutModal={() => setAboutModalOpen(true)}
         onOpenContactModal={() => setContactModalOpen(true)}
         onOpenShopLoginModal={openShopLoginPageWithTab}
+        onOpenAdminLogin={handleOpenAdminLogin}
       />
 
       {/* 2. Hero Section */}
@@ -143,6 +192,7 @@ export default function App() {
         onOpenReportScammer={() => setReportModalOpen(true)}
         onOpenAboutModal={() => setAboutModalOpen(true)}
         onOpenContactModal={() => setContactModalOpen(true)}
+        onOpenAdminLogin={handleOpenAdminLogin}
       />
 
       {/* MODALS */}

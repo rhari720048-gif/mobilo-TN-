@@ -19,6 +19,8 @@ import {
   Check
 } from 'lucide-react';
 import { TN_DISTRICTS, INDIA_STATES } from '../data/mockData';
+import MobiloWave from '../assets/MobiloWave';
+import MobiloPoint from '../assets/Shop Owner Login and admin login/MobiloPoint';
 
 export default function ShopLoginPage({ onNavigateHome, initialTab = 'login' }) {
   const [isSignUp, setIsSignUp] = useState(initialTab === 'register');
@@ -270,7 +272,7 @@ export default function ShopLoginPage({ onNavigateHome, initialTab = 'login' }) 
                 <input 
                   type="text"
                   required
-                  placeholder="Location / Area Address *"
+                  placeholder="Location *"
                   value={registerLocation}
                   onChange={(e) => setRegisterLocation(e.target.value)}
                   className="neu-input"
@@ -283,7 +285,7 @@ export default function ShopLoginPage({ onNavigateHome, initialTab = 'login' }) 
                 <input 
                   type="email"
                   required
-                  placeholder="Mail ID / Email Address *"
+                  placeholder="Email Address *"
                   value={registerEmail}
                   onChange={(e) => setRegisterEmail(e.target.value)}
                   className="neu-input"
@@ -409,62 +411,32 @@ export default function ShopLoginPage({ onNavigateHome, initialTab = 'login' }) 
             {/* Left Overlay Panel (Shown when right-panel-active / Register mode) */}
             <div className="overlay-panel overlay-left">
               
-              {/* Landing Page Exact Logo */}
-              <div className="brand-logo-badge" onClick={onNavigateHome}>
-                <div className="logo-icon-box">
-                  <ShieldCheck size={20} />
+              <div className="overlay-top-content">
+                {/* Landing Page Exact Logo */}
+                <div className="brand-logo-badge" onClick={onNavigateHome}>
+                  <div className="logo-icon-box">
+                    <ShieldCheck size={20} />
+                  </div>
+                  <div>
+                    <div className="brand-name">MOBILO <span className="blue-accent">TN</span></div>
+                    <div className="brand-tag">VERIFIED PLATFORM</div>
+                  </div>
                 </div>
-                <div>
-                  <div className="brand-name">MOBILO <span className="blue-accent">TN</span></div>
-                  <div className="brand-tag">VERIFIED PLATFORM</div>
-                </div>
+
+                <h1 className="overlay-heading">Hello, Shop Owner!</h1>
+                <p className="overlay-desc">
+                  Register your mobile shop today, get verified by District Admins across all 38 districts of Tamil Nadu.
+                </p>
               </div>
 
-              <h1 className="overlay-heading">Hello, Shop Owner!</h1>
-              <p className="overlay-desc">
-                Register your mobile shop today, get verified by District Admins across all 38 districts of Tamil Nadu.
-              </p>
-
-              {/* Pointing Guy Right (Points towards Login Form) */}
-              <div className="img-wrapper-3d">
-                <motion.div
-                  key={`human-aura-right-${isSignUp}`}
-                  className="char-pulse-aura"
-                  style={{ willChange: 'transform, opacity' }}
-                  initial={{ scale: 0.5, opacity: 0 }}
-                  animate={isSignUp ? { scale: [0.7, 1.2, 1], opacity: [0, 0.4, 0.2] } : { scale: 0.5, opacity: 0 }}
-                  transition={{ duration: 0.5, ease: "easeOut", delay: isSignUp ? 0.2 : 0 }}
-                />
-                <motion.img 
-                  key={`guy-right-${isSignUp}`}
-                  style={{ willChange: 'transform, opacity' }}
-                  initial={{ opacity: 0, scale: 0.85, y: 110 }}
-                  animate={isSignUp ? { 
-                    opacity: 1, 
-                    scale: 1, 
-                    y: 0 
-                  } : { 
-                    opacity: 0, 
-                    scale: 0.85, 
-                    y: 110 
-                  }}
-                  transition={isSignUp ? { 
-                    duration: 0.45,
-                    ease: [0.16, 1, 0.3, 1],
-                    delay: 0.22
-                  } : {
-                    duration: 0.28,
-                    ease: [0.7, 0, 0.84, 0]
-                  }}
-                  src="/pointing_guy_right.png" 
-                  alt="Pointing Character Illustration" 
-                  className="overlay-img overlay-img-right-pointing" 
-                />
+              {/* MobiloWave WebGL Animation Character */}
+              <div className="mobilo-wave-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', paddingLeft: '24px', boxSizing: 'border-box', margin: '0.1rem 0' }}>
+                <MobiloWave width={220} />
               </div>
 
               <button 
                 type="button"
-                className="ghost-btn mt-3"
+                className="ghost-btn"
                 onClick={() => {
                   setIsSignUp(false);
                   setDistrictDropdownOpen(false);
@@ -478,62 +450,32 @@ export default function ShopLoginPage({ onNavigateHome, initialTab = 'login' }) 
             {/* Right Overlay Panel (Shown when default Login mode) */}
             <div className="overlay-panel overlay-right">
               
-              {/* Landing Page Exact Logo */}
-              <div className="brand-logo-badge" onClick={onNavigateHome}>
-                <div className="logo-icon-box">
-                  <ShieldCheck size={20} />
+              <div className="overlay-top-content">
+                {/* Landing Page Exact Logo */}
+                <div className="brand-logo-badge" onClick={onNavigateHome}>
+                  <div className="logo-icon-box">
+                    <ShieldCheck size={20} />
+                  </div>
+                  <div>
+                    <div className="brand-name">MOBILO <span className="blue-accent">TN</span></div>
+                    <div className="brand-tag">VERIFIED PLATFORM</div>
+                  </div>
                 </div>
-                <div>
-                  <div className="brand-name">MOBILO <span className="blue-accent">TN</span></div>
-                  <div className="brand-tag">VERIFIED PLATFORM</div>
-                </div>
+
+                <h1 className="overlay-heading">Welcome Back, Boss!</h1>
+                <p className="overlay-desc">
+                  Already registered your shop? Login to manage your active stock, profile & verification status.
+                </p>
               </div>
 
-              <h1 className="overlay-heading">Welcome Back, Boss!</h1>
-              <p className="overlay-desc">
-                Already registered your shop? Login to manage your active stock, profile & verification status.
-              </p>
-
-              {/* Pointing Guy Left (Points towards Register Form) */}
-              <div className="img-wrapper-3d">
-                <motion.div
-                  key={`human-aura-left-${isSignUp}`}
-                  className="char-pulse-aura"
-                  style={{ willChange: 'transform, opacity' }}
-                  initial={{ scale: 0.5, opacity: 0 }}
-                  animate={!isSignUp ? { scale: [0.7, 1.2, 1], opacity: [0, 0.4, 0.2] } : { scale: 0.5, opacity: 0 }}
-                  transition={{ duration: 0.5, ease: "easeOut", delay: !isSignUp ? 0.2 : 0 }}
-                />
-                <motion.img 
-                  key={`guy-left-${isSignUp}`}
-                  style={{ willChange: 'transform, opacity' }}
-                  initial={{ opacity: 0, scale: 0.85, y: 110 }}
-                  animate={!isSignUp ? { 
-                    opacity: 1, 
-                    scale: 1, 
-                    y: 0 
-                  } : { 
-                    opacity: 0, 
-                    scale: 0.85, 
-                    y: 110 
-                  }}
-                  transition={!isSignUp ? { 
-                    duration: 0.45,
-                    ease: [0.16, 1, 0.3, 1],
-                    delay: 0.22
-                  } : {
-                    duration: 0.28,
-                    ease: [0.7, 0, 0.84, 0]
-                  }}
-                  src="/pointing_guy.png" 
-                  alt="Pointing Character Illustration" 
-                  className="overlay-img overlay-img-left-pointing" 
-                />
+              {/* MobiloPoint WebGL Animation Character */}
+              <div className="mobilo-point-wrapper" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', maxWidth: '100%', paddingLeft: '25px', boxSizing: 'border-box', margin: '0.1rem 0' }}>
+                <MobiloPoint width={240} />
               </div>
 
               <button 
                 type="button"
-                className="ghost-btn mt-3"
+                className="ghost-btn"
                 onClick={() => {
                   setIsSignUp(true);
                   setDistrictDropdownOpen(false);
@@ -610,6 +552,10 @@ export default function ShopLoginPage({ onNavigateHome, initialTab = 'login' }) 
           position: absolute;
           top: 0;
           height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
           transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
 
@@ -684,15 +630,23 @@ export default function ShopLoginPage({ onNavigateHome, initialTab = 'login' }) 
           position: absolute;
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: space-between;
           flex-direction: column;
-          padding: 0 35px;
+          padding: 2.25rem 25px 2rem 25px;
+          box-sizing: border-box;
           text-align: center;
           top: 0;
           height: 100%;
           width: 50%;
           transform: translateX(0);
           transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .overlay-top-content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
         }
 
         .overlay-left {
@@ -719,16 +673,19 @@ export default function ShopLoginPage({ onNavigateHome, initialTab = 'login' }) 
           align-items: center;
           justify-content: center;
           flex-direction: column;
-          padding: 2rem 2.25rem;
-          height: 100%;
+          padding: 1.5rem 2.25rem;
+          width: 100%;
+          box-sizing: border-box;
           text-align: center;
+          margin: auto 0;
         }
 
         .scrollable-form {
-          justify-content: flex-start !important;
+          max-height: 100%;
           overflow-y: auto;
-          padding-top: 1.75rem;
-          padding-bottom: 1.75rem;
+          margin: auto 0 !important;
+          padding-top: 1.5rem;
+          padding-bottom: 1.5rem;
         }
 
         .form-title {
@@ -1150,6 +1107,16 @@ export default function ShopLoginPage({ onNavigateHome, initialTab = 'login' }) 
         .mt-2 { margin-top: 0.5rem; }
         .mt-3 { margin-top: 0.75rem; }
 
+        .mobilo-point-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          max-width: 100%;
+          padding-left: 48px;
+          box-sizing: border-box;
+        }
+
         @media (max-width: 768px) {
           .auth-sliding-container {
             min-height: 560px;
@@ -1162,6 +1129,21 @@ export default function ShopLoginPage({ onNavigateHome, initialTab = 'login' }) 
           }
           .overlay-desc {
             font-size: 0.7rem;
+          }
+          .mobilo-point-wrapper {
+            padding-left: 20px !important;
+          }
+          .mobilo-point-wrapper > div {
+            width: 290px !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .mobilo-point-wrapper {
+            padding-left: 14px !important;
+          }
+          .mobilo-point-wrapper > div {
+            width: 220px !important;
           }
         }
       `}</style>
